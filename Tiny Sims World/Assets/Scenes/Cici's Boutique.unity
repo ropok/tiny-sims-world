@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 442945844}
   - component: {fileID: 442945845}
   - component: {fileID: 442945846}
+  - component: {fileID: 442945847}
   m_Layer: 0
   m_Name: Shop Keeper
   m_TagString: Untagged
@@ -335,6 +336,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &442945847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442945843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96603c8c9a084d15a6e2fcd03bfaecf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727918869
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +657,7 @@ GameObject:
   - component: {fileID: 1668241499}
   - component: {fileID: 1668241500}
   - component: {fileID: 1668241501}
+  - component: {fileID: 1668241502}
   m_Layer: 0
   m_Name: Hat Racks
   m_TagString: Untagged
@@ -744,6 +758,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1668241502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668241498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f0fa356fdd2e940bf3270a05215038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1770824724
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +781,7 @@ GameObject:
   - component: {fileID: 1770824725}
   - component: {fileID: 1770824726}
   - component: {fileID: 1770824727}
+  - component: {fileID: 1770824728}
   m_Layer: 0
   m_Name: Fitting Room
   m_TagString: Untagged
@@ -855,6 +882,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1770824728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770824724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f0fa356fdd2e940bf3270a05215038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2095186817
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +905,7 @@ GameObject:
   - component: {fileID: 2095186818}
   - component: {fileID: 2095186819}
   - component: {fileID: 2095186820}
+  - component: {fileID: 2095186821}
   m_Layer: 0
   m_Name: Shirt Racks
   m_TagString: Untagged
@@ -966,3 +1006,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2095186821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095186817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f0fa356fdd2e940bf3270a05215038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
