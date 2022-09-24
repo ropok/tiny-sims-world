@@ -18,8 +18,8 @@ namespace TinySimsWorld
             if (clickedGameObject == null) return;
             if (Input.GetMouseButton(0))
             {
-                var interactable = clickedGameObject.transform.name.ToString();
-                Debug.Log(interactable);
+                var interactable = clickedGameObject.GetComponent<IInteractable>();
+                interactable?.Interact();
             }
         }
 
