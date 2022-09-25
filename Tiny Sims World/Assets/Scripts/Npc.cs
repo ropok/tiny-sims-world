@@ -3,10 +3,12 @@ using UnityEngine;
 
 namespace TinySimsWorld
 {
-    public class Npc : MonoBehaviour, IInteractable
+    public class Npc : MonoBehaviour, IInteractable, INpc
     {
         private string _npcName;
         private PopupButton _popupButton;
+        [SerializeField] private string dialogue;
+        
 
         private void Awake()
         {
@@ -28,6 +30,11 @@ namespace TinySimsWorld
         public void Hover()
         {
             Debug.Log("Hovering " + _npcName);
+        }
+
+        public void Talking()
+        {
+            Debug.Log(dialogue);
         }
     }
 }

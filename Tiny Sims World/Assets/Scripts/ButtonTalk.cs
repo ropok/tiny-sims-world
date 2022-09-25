@@ -1,17 +1,31 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace TinySimsWorld
 {
     public class ButtonTalk : MonoBehaviour, IButtonAction
     {
-        public void Action()
+        private INpc _parentInteraction;
+        private void Awake()
         {
-            Talk("Hellow, my name is Cici!");
+            var parentGameObject = GetParentGameObject();
+            if (parentGameObject == null) return;
+            var parentInteraction = parentGameObject.GetComponent<INpc>();
+            _parentInteraction = parentInteraction;
         }
 
-        private void Talk(string dialogue)
+        public void Action()
         {
-            Debug.Log(dialogue);
+            _parentInteraction?.Talking();
+        }
+
+        private GameObject GetParentGameObject()
+        {
+            GameObject result = null;
+            result = transform.parent.GameObject();
+            return result;
         }
     }
+
 }

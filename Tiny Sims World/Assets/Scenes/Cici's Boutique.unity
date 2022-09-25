@@ -416,6 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96603c8c9a084d15a6e2fcd03bfaecf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue: Welcome to Cici's Boutique!
 --- !u!114 &442945848
 MonoBehaviour:
   m_ObjectHideFlags: 0

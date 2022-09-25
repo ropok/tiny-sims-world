@@ -25,7 +25,7 @@ namespace TinySimsWorld
             var paddingCanvas = position.y;
             foreach (var canvasPopup in canvasPopups)
             {
-                var canvasPopupObject = Instantiate(canvasPopup, new Vector2(position.x, paddingCanvas), Quaternion.identity);
+                var canvasPopupObject = Instantiate(canvasPopup, new Vector2(position.x, paddingCanvas), Quaternion.identity, gameObject.transform);
                 paddingCanvas += Padding;
                 if(canvasPopup != null)
                     _listCanvasPopups.Add(canvasPopupObject.gameObject);
