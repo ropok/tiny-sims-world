@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace TinySimsWorld
@@ -37,9 +38,15 @@ namespace TinySimsWorld
 
         public void Talking()
         {
-            // Debug.Log(dialogue);
-            // Debug.Log("My name is " + npcName);
             _popupDialogue.Popup();
+            _popupButton.Popdown();
+            StartCoroutine(DestroyDialogueCoroutine(3));
+        }
+
+        IEnumerator DestroyDialogueCoroutine(float waitForSeconds)
+        {
+            yield return new WaitForSeconds(waitForSeconds);
+            _popupDialogue.Popdown();
         }
     }
 }
