@@ -314,6 +314,8 @@ GameObject:
   - component: {fileID: 442945846}
   - component: {fileID: 442945847}
   - component: {fileID: 442945848}
+  - component: {fileID: 442945850}
+  - component: {fileID: 442945849}
   m_Layer: 0
   m_Name: Shop Keeper
   m_TagString: Untagged
@@ -416,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96603c8c9a084d15a6e2fcd03bfaecf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _npcName: Cici
   dialogue: Welcome to Cici's Boutique!
 --- !u!114 &442945848
 MonoBehaviour:
@@ -432,6 +435,36 @@ MonoBehaviour:
   canvasPopups:
   - {fileID: 2590101478856006619, guid: 558516d0279a9ac4ebdb6f3d8719cb07, type: 3}
   - {fileID: 2590101478856006619, guid: a7e74230b4d72cf4a8a4f8ad596a26b7, type: 3}
+--- !u!114 &442945849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442945843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ff46e12941451082b4f16d465e4bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasPopups:
+  - {fileID: 3040382601883916270, guid: d193d34f7491c644ab4b91198f97c0ea, type: 3}
+--- !u!114 &442945850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442945843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1731bc125ee8454893bf9a7d6a752347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cici
+  sentence: 'Welcome to Cici''s Boutique!
+
+    I''m Cici :)'
 --- !u!1 &727918869
 GameObject:
   m_ObjectHideFlags: 0
