@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.Player
 {
     public class Player : MonoBehaviour
     {

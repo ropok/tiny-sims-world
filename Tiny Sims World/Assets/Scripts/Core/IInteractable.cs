@@ -1,4 +1,4 @@
-namespace TinySimsWorld
+namespace TinySimsWorld.Core
 {
     public interface IInteractable
     {

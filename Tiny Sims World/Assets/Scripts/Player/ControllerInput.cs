@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.Player
 {
     public class ControllerInput : IPlayerInput
     {

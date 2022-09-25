@@ -1,7 +1,6 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.Core
 {
     public class ClickInteract : MonoBehaviour
     {

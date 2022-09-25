@@ -1,8 +1,8 @@
-using System;
+using TinySimsWorld.Core;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.InteractableObjects
 {
     public class ButtonTalk : MonoBehaviour, IButtonAction
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.InteractableObjects
 {
     [System.Serializable]
     public class Dialogue : MonoBehaviour

@@ -1,6 +1,7 @@
+using TinySimsWorld.Core;
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.InteractableObjects
 {
     public class Racks : MonoBehaviour, IInteractable
     {

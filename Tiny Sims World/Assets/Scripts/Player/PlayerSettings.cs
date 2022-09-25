@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.Player
 {
     [CreateAssetMenu(fileName = "PlayerData", menuName = "Player/Settings", order = 0)]
     public class PlayerSettings : ScriptableObject

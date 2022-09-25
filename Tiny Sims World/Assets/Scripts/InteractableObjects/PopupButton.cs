@@ -1,15 +1,13 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.InteractableObjects
 {
-    public class PopupDialogue : MonoBehaviour
+    public class PopupButton : MonoBehaviour
     {
         [SerializeField] private List<Canvas> canvasPopups;
         private List<GameObject> _listCanvasPopups = new List<GameObject>();
-        private const float Padding = 2f;
+        private const float Padding = -1f;
         private bool IsPopped;
 
         private void Awake()
@@ -22,7 +20,7 @@ namespace TinySimsWorld
         {
             if (IsPopped) return;
             var position = gameObject.transform.position;
-            var paddingCanvas = position.y + Padding;
+            var paddingCanvas = position.y;
             foreach (var canvasPopup in canvasPopups)
             {
                 var canvasPopupObject = Instantiate(canvasPopup, new Vector2(position.x, paddingCanvas), Quaternion.identity, gameObject.transform);

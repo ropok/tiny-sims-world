@@ -1,8 +1,8 @@
-using System;
 using System.Collections;
+using TinySimsWorld.Core;
 using UnityEngine;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.InteractableObjects
 {
     public class Npc : MonoBehaviour, IInteractable, INpc
     {

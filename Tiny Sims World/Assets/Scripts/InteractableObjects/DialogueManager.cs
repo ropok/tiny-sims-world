@@ -1,10 +1,8 @@
-using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace TinySimsWorld
+namespace TinySimsWorld.InteractableObjects
 {
     public class DialogueManager : MonoBehaviour
     {
