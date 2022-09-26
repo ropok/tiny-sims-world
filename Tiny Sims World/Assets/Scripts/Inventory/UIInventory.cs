@@ -13,7 +13,7 @@ namespace TinySimsWorld.Inventory
         private void Awake()
         {
             _inventoryManager = GetComponent<InventoryManager>();
-            foreach (var itemSetting in _inventoryManager.listItemSettings)
+            foreach (var itemSetting in _inventoryManager.itemDatabase.ListItemSetting)
             {
                 CreateItem(itemSetting);
             }
