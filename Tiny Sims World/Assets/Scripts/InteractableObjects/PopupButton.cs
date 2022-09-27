@@ -34,7 +34,7 @@ namespace TinySimsWorld.InteractableObjects
 
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.E)) Popdown();
+            if(Input.GetKeyDown(KeyCode.Escape)) Popdown();
         }
 
         public void Popdown()

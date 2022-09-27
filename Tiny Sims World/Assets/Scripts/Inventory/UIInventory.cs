@@ -41,6 +41,10 @@ namespace TinySimsWorld.Inventory
             _padding = 0f;
             IsPopped = false;
         }
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.Escape)) Popdown();
+        }
 
         private void CreateItem(ItemSettings itemSetting, float _padding)
         {
