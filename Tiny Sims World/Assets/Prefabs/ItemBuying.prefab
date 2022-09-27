@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 4996557192253757344}
   - component: {fileID: 1301160479854651479}
   m_Layer: 5
-  m_Name: ItemSelling
+  m_Name: ItemBuying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   icon: {fileID: 6082686776930221511}
   price: {fileID: 6082686775423480670}
   buttonInteract: {fileID: 2496394294361024492}
-  isSelling: 1
+  isSelling: 0
 --- !u!114 &1301160479854651479
 MonoBehaviour:
   m_ObjectHideFlags: 0

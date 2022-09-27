@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace TinySimsWorld.Inventory
         [SerializeField] private GameObject itemPrefab;
         private InventoryManager _inventoryManager;
         private float _padding = 0f;
-        private const float Padding = 64f;
+        private const float Padding = 160f;
         private bool IsPopped;
         private List<GameObject> _listCanvasPopups = new List<GameObject>();
 
@@ -20,7 +19,6 @@ namespace TinySimsWorld.Inventory
         {
             IsPopped = false;
             _inventoryManager = GetComponent<InventoryManager>();
-            Popup();
         }
 
         public void Popup()

@@ -46,6 +46,7 @@ namespace TinySimsWorld.Inventory
         }
         private void BuyItem(ItemSettings item)
         {
+            if (moneyManager.Money < item.BuyPrice) return;
             Debug.Log("Bought: " + item.BuyPrice);
             moneyManager.Money -= item.BuyPrice;
             Destroy(gameObject);
