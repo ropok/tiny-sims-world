@@ -9,7 +9,7 @@ namespace TinySimsWorld.Inventory
         [SerializeField] private GameObject itemPrefab;
         private InventoryManager _inventoryManager;
         private float _padding = 0f;
-        private const float Padding = 160f;
+        private const float Padding = 480f;
         private bool IsPopped;
         private List<GameObject> _listCanvasPopups = new List<GameObject>();
 
