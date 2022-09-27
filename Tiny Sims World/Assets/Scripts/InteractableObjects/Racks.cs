@@ -22,7 +22,7 @@ namespace TinySimsWorld.InteractableObjects
             Use();
         }
 
-        public void Hover()
+        public void Interact2()
         {
             Debug.Log("Hovering " + _racksName);
         }

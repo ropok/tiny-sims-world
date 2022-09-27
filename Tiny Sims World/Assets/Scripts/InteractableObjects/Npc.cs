@@ -29,7 +29,7 @@ namespace TinySimsWorld.InteractableObjects
             Interaction();
         }
 
-        public void Hover()
+        public void Interact2()
         {
             Debug.Log("Hovering " + _npcName);
         }

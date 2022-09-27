@@ -13,11 +13,16 @@ namespace TinySimsWorld.Inventory
         private UIInventory _uiInventory;
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI price;
+        [SerializeField] private TextMeshProUGUI buttonInteract;
+        
         private ItemSettings _itemData;
-        [SerializeField] private MoneyManager moneyManager;
+        private MoneyManager moneyManager;
+        [SerializeField] private bool isSelling = true;
+        
         
         private void Awake()
         {
+            moneyManager = GetComponent<MoneyManager>();
             _uiInventory = GetComponentInParent<UIInventory>();
             _itemData = _uiInventory.ItemData;
             AssignIcon(_itemData);
@@ -25,8 +30,11 @@ namespace TinySimsWorld.Inventory
 
         private void AssignIcon(ItemSettings item)
         {
+            var _assignedPrice = isSelling == true ? item.SellPrice : item.BuyPrice;
+            var _buttonInteract = isSelling == true ? "Sell" : "Buy";
             icon.sprite = item.Icon;
-            price.text = "£ " + item.SellPrice;
+            price.text = "£ " + _assignedPrice;
+            buttonInteract.text = _buttonInteract;
 
         }
 
@@ -36,10 +44,20 @@ namespace TinySimsWorld.Inventory
             moneyManager.Money += item.SellPrice;
             Destroy(gameObject);
         }
+        private void BuyItem(ItemSettings item)
+        {
+            Debug.Log("Bought: " + item.BuyPrice);
+            moneyManager.Money -= item.BuyPrice;
+            Destroy(gameObject);
+        }
 
         public void Interact()
         {
-            SellItem(_itemData);
+            if (isSelling) SellItem(_itemData);
+            else
+            {
+                BuyItem(_itemData);
+            }
             // Debug.Log("clicked");
         }
 
@@ -48,7 +66,7 @@ namespace TinySimsWorld.Inventory
             if (Input.GetMouseButtonDown(0)) Debug.Log("test lcik");
         }
 
-        public void Hover()
+        public void Interact2()
         {
             throw new System.NotImplementedException();
         }

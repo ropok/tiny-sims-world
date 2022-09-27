@@ -3,6 +3,6 @@ namespace TinySimsWorld.Core
     public interface IInteractable
     {
         void Interact();
-        void Hover();
+        void Interact2();
     }
 }
