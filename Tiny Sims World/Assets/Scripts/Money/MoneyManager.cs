@@ -16,6 +16,10 @@ namespace TinySimsWorld.Money
             moneySetting.Money -= amount;
         }
 
-        public float Money => moneySetting.Money;
+        public float Money
+        {
+            get => moneySetting.Money;
+            set => moneySetting.Money = value;
+        }
     }
 }

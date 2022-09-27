@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -7,23 +9,51 @@ namespace TinySimsWorld.Inventory
     {
         [SerializeField] private GameObject itemPrefab;
         private InventoryManager _inventoryManager;
+        private float _padding = 0f;
+        private const float Padding = 64f;
+        private bool IsPopped;
+        private List<GameObject> _listCanvasPopups = new List<GameObject>();
 
         public ItemSettings ItemData { get; private set; }
 
         private void Awake()
         {
+            IsPopped = false;
             _inventoryManager = GetComponent<InventoryManager>();
-            foreach (var itemSetting in _inventoryManager.itemDatabase.ListItemSetting)
-            {
-                CreateItem(itemSetting);
-            }
+            Popup();
         }
 
-        private void CreateItem(ItemSettings itemSetting)
+        public void Popup()
         {
+            foreach (var itemSetting in _inventoryManager.itemDatabase.ListItemSetting)
+            {
+                CreateItem(itemSetting, _padding);
+                _padding += Padding;
+            }
+
+            IsPopped = true;
+        }
+
+        public void Popdown()
+        {
+            foreach (var listCanvasPopup in _listCanvasPopups)
+            {
+                Destroy(listCanvasPopup);
+            }
+            IsPopped = false;
+        }
+
+        private void CreateItem(ItemSettings itemSetting, float _padding)
+        {
+            if (IsPopped) return;
+            var position = gameObject.transform.position;
+            var paddingCanvas = position.x + _padding;
             var parentUI = transform;
             ItemData = itemSetting;
-            var item = Instantiate(itemPrefab, parentUI.position, quaternion.identity, parentUI);
+            // var item = Instantiate(itemPrefab, parentUI.position, quaternion.identity, parentUI);
+            var item = Instantiate(itemPrefab, new Vector2(paddingCanvas, position.y), quaternion.identity, parentUI);
+            if(item != null)
+                _listCanvasPopups.Add(item.gameObject);
         }
     }
 }

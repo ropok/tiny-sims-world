@@ -1,5 +1,6 @@
 using System;
 using TinySimsWorld.Core;
+using TinySimsWorld.Money;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace TinySimsWorld.Inventory
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI price;
         private ItemSettings _itemData;
+        [SerializeField] private MoneyManager moneyManager;
+        
         private void Awake()
         {
             _uiInventory = GetComponentInParent<UIInventory>();
@@ -30,13 +33,14 @@ namespace TinySimsWorld.Inventory
         private void SellItem(ItemSettings item)
         {
             Debug.Log("Sold: " + item.SellPrice);
+            moneyManager.Money += item.SellPrice;
             Destroy(gameObject);
         }
 
         public void Interact()
         {
-            // SellItem(_itemData);
-            Debug.Log("clicked");
+            SellItem(_itemData);
+            // Debug.Log("clicked");
         }
 
         private void OnMouseDown()
