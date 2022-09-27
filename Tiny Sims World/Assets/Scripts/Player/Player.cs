@@ -6,12 +6,16 @@ namespace TinySimsWorld.Player
     {
         [SerializeField] private PlayerSettings playerSettings;
         [SerializeField] private Animator animator;
+        [SerializeField] private Animator animatorTorso;
 
         private IPlayerInput _playerInput;
         private PlayerMovement _playerMovement;
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
         private static readonly int Vertical = Animator.StringToHash("Vertical");
         private static readonly int Magnitude = Animator.StringToHash("Magnitude");
+        private static readonly int HorizontalTorso = Animator.StringToHash("Horizontal");
+        private static readonly int VerticalTorso = Animator.StringToHash("Vertical");
+        private static readonly int MagnitudeTorso = Animator.StringToHash("Magnitude");
 
         private void Awake()
         {
@@ -27,6 +31,9 @@ namespace TinySimsWorld.Player
             animator.SetFloat(Horizontal, _playerInput.Speed.x);
             animator.SetFloat(Vertical, _playerInput.Speed.y);
             animator.SetFloat(Magnitude, _playerInput.Speed.magnitude);
+            animatorTorso.SetFloat(Horizontal, _playerInput.Speed.x);
+            animatorTorso.SetFloat(Vertical, _playerInput.Speed.y);
+            animatorTorso.SetFloat(Magnitude, _playerInput.Speed.magnitude);
             
         }
 
