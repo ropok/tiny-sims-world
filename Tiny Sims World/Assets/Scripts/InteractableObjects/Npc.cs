@@ -7,9 +7,9 @@ namespace TinySimsWorld.InteractableObjects
     public class Npc : MonoBehaviour, IInteractable, INpc
     {
         [SerializeField] private string _npcName;
+        [SerializeField] private string dialogue;
         private PopupButton _popupButton;
         private PopupDialogue _popupDialogue;
-        [SerializeField] private string dialogue;
 
 
         private void Awake()

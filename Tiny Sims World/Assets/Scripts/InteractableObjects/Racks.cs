@@ -6,20 +6,22 @@ namespace TinySimsWorld.InteractableObjects
     public class Racks : MonoBehaviour, IInteractable
     {
         private string _racksName;
+        private PopupButton _popupButton;
 
         private void Awake()
         {
             _racksName = gameObject.name;
+            _popupButton = GetComponent<PopupButton>();
         }
 
-        private void Use()
+        private void Interaction()
         {
-            Debug.Log("Using " + _racksName);
+            _popupButton.Popup();
         }
 
         public void Interact()
         {
-            Use();
+            Interaction();
         }
 
         public void Interact2()
