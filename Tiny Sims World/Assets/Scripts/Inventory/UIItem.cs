@@ -68,7 +68,6 @@ namespace TinySimsWorld.Inventory
         {
             Debug.Log("Equipped: " + item.name);
             playerOutfits.Color = item.Color;
-            Destroy(gameObject);
         }
 
         public void Interact()

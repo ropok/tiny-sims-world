@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 18276794}
   - component: {fileID: 18276796}
   - component: {fileID: 18276797}
+  - component: {fileID: 18276798}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -317,6 +318,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyDisplay: {fileID: 1901380686}
+--- !u!114 &18276798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18276793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672e9be6f0aa42148e4334f938273beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiInventory: {fileID: 1421146029}
 --- !u!1 &60749121
 GameObject:
   m_ObjectHideFlags: 0
@@ -10699,6 +10713,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421146027}
+  - component: {fileID: 1421146029}
+  - component: {fileID: 1421146028}
   m_Layer: 5
   m_Name: SlotInventory
   m_TagString: Untagged
@@ -10715,7 +10731,7 @@ RectTransform:
   m_GameObject: {fileID: 1421146026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1274567752}
@@ -10723,9 +10739,35 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -180, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1421146028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421146026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a7079d55c04411898e3a9c200522e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatabase: {fileID: 11400000, guid: c2b62153d591b8a4fa149ef417604963, type: 2}
+--- !u!114 &1421146029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421146026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e308c1e3c51044cb838e7327b1012178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 6082686776763284010, guid: a74b531149c65d649b8a996ac500b25d, type: 3}
 --- !u!1 &1632100403
 GameObject:
   m_ObjectHideFlags: 0

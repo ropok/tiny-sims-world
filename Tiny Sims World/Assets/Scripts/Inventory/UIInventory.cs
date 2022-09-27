@@ -38,6 +38,7 @@ namespace TinySimsWorld.Inventory
             {
                 Destroy(listCanvasPopup);
             }
+            _padding = 0f;
             IsPopped = false;
         }
 
