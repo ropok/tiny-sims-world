@@ -1,6 +1,7 @@
 using System;
 using TinySimsWorld.Core;
 using TinySimsWorld.Money;
+using TinySimsWorld.Player;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -14,10 +15,14 @@ namespace TinySimsWorld.Inventory
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI price;
         [SerializeField] private TextMeshProUGUI buttonInteract;
+        [SerializeField] private PlayerOutfits playerOutfits;
+        
         
         private ItemSettings _itemData;
         private MoneyManager moneyManager;
         [SerializeField] private bool isSelling = true;
+        [SerializeField] private bool isInventory = false;
+        
         
         
         private void Awake()
@@ -32,9 +37,17 @@ namespace TinySimsWorld.Inventory
         {
             var _assignedPrice = isSelling == true ? item.SellPrice : item.BuyPrice;
             var _buttonInteract = isSelling == true ? "Sell" : "Buy";
-            icon.sprite = item.Icon;
-            price.text = "£ " + _assignedPrice;
-            buttonInteract.text = _buttonInteract;
+            if (!isInventory)
+            {
+                price.text = "£ " + _assignedPrice;
+                buttonInteract.text = _buttonInteract;
+            }
+            else
+            {
+                price.text = "";
+                buttonInteract.text = "Equip";
+            }
+                icon.sprite = item.Icon;
 
         }
 
@@ -51,14 +64,23 @@ namespace TinySimsWorld.Inventory
             moneyManager.Money -= item.BuyPrice;
             Destroy(gameObject);
         }
+        private void EquipItem(ItemSettings item)
+        {
+            Debug.Log("Equipped: " + item.name);
+            playerOutfits.Color = item.Color;
+            Destroy(gameObject);
+        }
 
         public void Interact()
         {
-            if (isSelling) SellItem(_itemData);
-            else
+            if (!isInventory)
             {
-                BuyItem(_itemData);
-            }
+                if (isSelling) SellItem(_itemData);
+                else
+                {
+                    BuyItem(_itemData);
+                }
+            } else EquipItem(_itemData);
             // Debug.Log("clicked");
         }
 

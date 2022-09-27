@@ -18,4 +18,4 @@ MonoBehaviour:
   texture: {fileID: 0}
   buyPrice: 60
   sellPrice: 30
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.04650232, g: 0.564827, b: 0.8962264, a: 0}
